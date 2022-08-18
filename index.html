@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="./index.css" rel="stylesheet">
+    <link href="./package/balm-ui/balm-ui.css" rel="stylesheet"/>
+    <script src="./package/vue/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <header v-shadow.transition="[1, 3]">
+        <ui-segmented-buttons :items="buttons" @click="handleTabClick" single-select
+                              v-model="checkedValue"></ui-segmented-buttons>
+        <ui-textfield @input="onSearch" outlined style="flex: 1" v-model="keyword" with-trailing-icon>
+            搜索关键词
+            <template #after>
+                <ui-textfield-icon @click="handleClearSearch">close</ui-textfield-icon>
+            </template>
+        </ui-textfield>
+    </header>
+    <main>
+        <div :key="itemHeight" class="left" ref="left">
+            <ui-list single-selection v-model="selectedIndex">
+                <ui-item :key="i" :style="{height: itemHeight + 'px !important'}" class="ui-item" v-for="i in 18">
+                    <ui-item-first-content>
+                        <ui-icon>folder</ui-icon>
+                    </ui-item-first-content>
+                    <ui-item-text-content>list item</ui-item-text-content>
+                </ui-item>
+            </ui-list>
+
+        </div>
+        <div :key="itemHeight" class="shortkey-list">
+            <ui-list>
+                <ui-item :key="i" :style="{height: itemHeight + 'px !important'}" class="ui-item" v-for="i in 9">
+                    <ui-item-text-content>⌘ + {{i}}</ui-item-text-content>
+                </ui-item>
+            </ui-list>
+        </div>
+    </main>
+    <!--    <footer v-shadow="6">1</footer>-->
+</div>
+<script>
+	const {createApp, ref, computed, onMounted, onBeforeUpdate} = Vue
+</script>
+<script src="./package/balm-ui/balm-ui.min.js"></script>
+<script src="./package/balm-ui/balm-ui-plus.js"></script>
+<script src="./computed.js"></script>
+<script src="./hooks.js"></script>
+<script src="./main.js" type="module"></script>
+<script src="./utools.js"></script>
+</body>
+</html>

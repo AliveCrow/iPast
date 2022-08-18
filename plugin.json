@@ -1,0 +1,24 @@
+{
+  "main": "index.html",
+  "preload": "preload.js",
+  "logo": "logo.png",
+  "pluginSetting": {
+    "single": false,
+    "height": 800
+  },
+  "features": [
+    {
+      "code": "iPast",
+      "explain": "iPast",
+      "cmds": [
+        "iPast",
+        "粘贴",
+        "剪切板",
+        "剪贴板",
+        "copy",
+        "c",
+        "v"
+      ]
+    }
+  ]
+}

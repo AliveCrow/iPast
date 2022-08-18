@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+#app header {
+  height: 80px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#app main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+#app main .ui-item {
+  height: 70px;
+}
+#app main .left {
+  height: calc(100vh - 80px);
+  flex: 1;
+  overflow: auto;
+}
+#app main .shortkey-list {
+  width: 75px;
+}
+#app footer {
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 1px -1px rgba(0, 0, 0, 0.2), 0 -1px 1px 0 rgba(0, 0, 0, 0.14), 0 -1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*# sourceMappingURL=index.css.map */
